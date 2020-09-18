@@ -67,17 +67,14 @@ class EventsPage extends Component {
             limit : 5
           }
           this.props.getEvents(data).then((res)=>{
-            console.log(res.value.data.pageInfo)
             this.setState({
               totalPage: res.value.data.pageInfo.total_page,
-              total_data : res.value.data.data.length*res.value.data.pageInfo.total_page
+              total_data : res.value.data.data.length*res.value.data.pageInfo.total_page,
+              search : this.Search.current.state.data
               })
           }).catch((err)=>{
             console.log(err)
           })
-        this.setState({
-            search : this.Search.current.state.data
-        })
     }
     getData = ()=>{
         let data = {
