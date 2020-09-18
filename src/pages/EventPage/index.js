@@ -8,6 +8,8 @@ import {connect} from 'react-redux';
 import NavbarComponent from '../../components/Navbar';
 import DrawerInput from '../../components/DrawerInput/DrawerInput';
 import { SearchOutlined } from '@ant-design/icons'
+import Moment from 'react-moment';
+
 
 const { Search } = Input
 
@@ -138,7 +140,7 @@ class EventsPage extends Component {
                                         <td>{row.id}</td>
                                         <td> {row.title} </td>
                                         <td> {row.location} </td>
-                                        <td> {row.date} </td>
+                                        <td> <Moment format="YYYY/MM/DD" date={row.date} /> </td>
                                         <td> {row.participan} </td>
                                         <td> {row.note} </td>
                                         </tr>
@@ -150,7 +152,6 @@ class EventsPage extends Component {
                 </div>
               </div>
             </Container>
-                <DrawerInput/>
             </>
         )
 }

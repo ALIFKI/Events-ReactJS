@@ -35,10 +35,11 @@ class NavbarComponent extends Component {
             <NavbarBrand href="/">
                     <h4 className={'pl-2'}>NavBrand</h4 >
             </NavbarBrand>
-                <Collapse isOpen={this.state.toggle} navbar className={`pl-4`}>
+                <Collapse isOpen={this.state.toggle} navbar>
                 <Nav className="mr-auto" navbar>
-                        <Link className={`btn ml-2 ${Style.btnInfo} ${Style.fP}`} to='/eventlist'>Event list</Link>
-                        <Link className={`btn ml-2 ${Style.btnInfo} ${Style.fP}`} to='/dashboard'>Dashboard</Link>
+                        <Link className={`btn ${Style.btnInfo} ${Style.fP}`} to='/eventlist'>Event list</Link>
+                        <Link className={`btn ${Style.btnInfo} ${Style.fP}`} to='/dashboard'>Dashboard</Link>
+                        <Link className={`btn ${Style.btnCreate} ${Style.fP}`} to='/'>Create</Link>
                 </Nav>
                 </Collapse>
         </Navbar>

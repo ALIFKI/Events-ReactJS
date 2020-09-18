@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import Style from './CardBook.module.css'
 import {Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle, Button} from 'reactstrap';
 import { EnvironmentOutlined } from '@ant-design/icons'
-
+import Moment from 'react-moment'
 
 class CardList extends Component {
     constructor(props){
@@ -21,7 +21,9 @@ class CardList extends Component {
                         <CardTitle className={`${Style.loc}`}> {this.props.data.location} </CardTitle>
                     </div>
                     <CardSubtitle className={`${Style.title}`}> {this.props.data.events} </CardSubtitle>
-                    <p className={`${Style.date}`}> {this.props.data.date} </p>
+                    <p className={`${Style.date}`}>
+                        <Moment format="LL" date={this.props.data.date} /> 
+                    </p>
                     <hr/>
                     <div className={`${Style.people}`}>
                         <div className='d-flex flex-row justify-content-start align-items-center'>
@@ -32,9 +34,9 @@ class CardList extends Component {
                     <hr/>
                     <CardText className={`${Style.note}`}>
                         <div className={`p-2 d-flex flex-row`}>
-                            <h5>Note : </h5>
                             <p className={'pl-1'}>
-                            {this.props.data.note}
+                              <b>  Note : </b>
+                            {this.props.data.note.slice(0,50)}...
                             </p>
                         </div>
                     </CardText>

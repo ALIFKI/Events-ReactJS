@@ -72,7 +72,7 @@ class EventPost extends Component {
                             <div className='input-wrapper no-gutter'>
                                 <InputLogin name={'title'} required={true} placeholder={'Title Event'} type={'text'} value={this.state.username} ref={this.textInput}/>
                                 <InputLogin name={'Note'} required={true} placeholder={'Note'} type={'text'} value={this.state.note} ref={this.note}/>
-                                <InputLogin name={'Date'} required={true} placeholder={'Date'} type={'Date'} value={this.state.date} ref={this.date}/>
+                                <InputLogin name={'Date'} required={true} placeholder={'Date'} type={'date'} value={this.state.date} ref={this.date}/>
                                 <InputLogin name={'Location'} required={true} placeholder={'Location'} type={'text'} value={this.state.date} ref={this.location}/>
                                 <InputLogin name={'Participant'} required={true} placeholder={'Participant'} type={'text'} value={this.state.participant} ref={this.participant}/>
                                 <InputLogin name={'Image'} required={true} placeholder={''} type={'file'} value={''} ref={this.image} />
