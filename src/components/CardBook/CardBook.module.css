@@ -1,0 +1,35 @@
+.image{
+    max-width: 250px;
+}
+.cardBody{
+    max-width: 250px;
+    box-shadow: rgba(49, 53, 59, 0.12) 0px 3px 6px 0px;
+    margin : 20px
+}
+.loc{
+    font-family: 'Poppins';
+    margin : 0
+}
+.title{
+    font-family: 'Poppins-Bold';
+    font-size: 24px;
+}
+.date{
+    font-family: 'Poppins';
+}
+.img{
+    height: 20px;
+}
+.userName{
+    margin : 0
+}
+.people{
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-color: black;
+}
+.note {
+    background-color: #F6FAFD;
+    margin-left: -20px; 
+    margin-right: -20px; 
+}

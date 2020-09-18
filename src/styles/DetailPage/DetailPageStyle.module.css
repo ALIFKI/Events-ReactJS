@@ -1,0 +1,56 @@
+.PageHeader{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 6px -1px;
+}
+.bookDetail{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 6px -1px;
+    height: 100%;
+}
+    .description{
+        margin: 20px;
+    }
+    .cardBook{
+        display: flex;
+        margin: 20px 10px 10px 10px;
+        height: 150px;
+        width: 120px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 6px -1px;
+        overflow: hidden;
+    }
+    .cardBook img{
+        height: 100%;
+        width: 100%;
+    }
+    .coverImage{
+        display: flex;
+        margin: auto;
+        /* position: relative; */
+        height: 300px;
+        width: 100%;
+    }
+    .coverImage img{
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        filter: blur(4px);
+    }
+        .detail{
+            background-color: white;
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 6px -1px;
+        }
+            .text{
+                margin: 20px
+            }
+            /* .genre{
+                background-color: black;
+                border-radius: 20px;
+                max-width: 100px;
+                max-height: 50px;
+            }
+            .genre h6{
+                padding: 5px 10px 5px 10px;
+                color: white;
+            } */

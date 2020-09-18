@@ -1,0 +1,100 @@
+@media only screen and (max-width: 600px) {
+    .remove{
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+    }
+    .textwhite{
+        z-index: -0;
+    }
+    .textBlack{
+        color: #2B2B2B;
+    }
+  }
+@media only screen and (max-height : 1440px){
+}
+
+.content{
+    padding: 50px;
+    margin: auto;
+}
+    .image{
+        padding-Bottom : 20px
+    }
+    .rowForm{
+        margin: auto;
+    }
+    .input-wrapprr{
+        padding: 20px;
+    }
+    .login-form p{
+        padding-bottom: 20px; 
+    }
+.footer{
+    position: absolute;
+    bottom: 0px;
+}
+.heightMax{
+    height: 100%;
+}
+    .coverImage{
+        padding: 20px;
+        /* background-image: url("../images/bg-cover.png");  */
+        background-color: #fff; 
+        height: 100%; 
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+    .textwhite{
+        font-family: Poppins-Bold;
+        padding: 30px 10px;
+        color: #2B2B2B;
+        position: absolute;
+        font-size: 2.3rem;
+        z-index: 1;
+        width: 60%;
+    }
+        .btnInfo{
+            width: 100px;
+            border: 1px solid #bfbfbf !important; 
+        }
+    .title{
+        font-family: Poppins-Bold;
+        padding: 20px 20px 30px 0px;
+        width : 65%
+    }
+    .fP{
+        font-family: Poppins-Bold;
+    }
+    .title p{
+        font-family: Poppins;
+    }
+    .btnLogin{
+        width: 100px;
+        background-color: black;
+    }
+        .textblock{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width : 100%;
+            position: absolute;
+            top:0px;
+            bottom:0px;
+            left: 0px;
+            right:0px;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .textblock img{
+            padding : 20px 10px;
+            height: 500px;
+            width: 100%;
+        }
+
+        .a{
+            color : black
+        }

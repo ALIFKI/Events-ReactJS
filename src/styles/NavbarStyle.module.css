@@ -1,0 +1,15 @@
+@media only screen and (max-width: 700px) {
+    .Navbar{
+        left: 0px !important;
+    }
+  }
+
+.Navbar{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 6px -1px;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+}

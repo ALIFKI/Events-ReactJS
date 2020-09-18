@@ -1,0 +1,63 @@
+@media only screen and (max-width: 600px) {
+    .cardBook{
+        height: 200px !important;
+        width: 150px !important;
+    }
+    .title{
+        width: 50% !important;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+    .title h3{
+        font-size: 20px;
+        margin: 0px 10px!important;
+    }
+    .title p {
+        margin : 0 0px 20px 5px
+    }
+    .title button{
+        width: 60%;
+    }
+  }
+.cardBook{
+    height: 300px;
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    top: -5%;
+    /* box-shadow: rgba(0, 0, 0, 0.07) 2px 2px 9px 6px; */
+    position: absolute;
+    left: 10px;
+    z-index: 2;
+}
+    .cardBook img{
+        height: 100%;
+        width: 100%;
+    }
+    .title{
+        font-family: Poppins;
+        width: 60%;
+        margin: 20px;
+        text-align: left;
+    }
+    .title h3{
+        font-family : Poppins-Bold
+    }
+    .title p {
+        margin : 0 0px 20px 5px
+    }
+    .blur{
+        overflow: inherit;
+        z-index: 1;
+        top : 2%;
+        opacity: 0.3;
+    }
+    .blur img{
+        filter: blur(10px);
+        -webkit-filter: blur(10px);
+    }

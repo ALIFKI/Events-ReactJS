@@ -1,0 +1,42 @@
+@media only screen and (max-width: 700px) {
+    .bg{
+        padding-left: 15px !important;
+    }
+    .statis{
+        padding-left: 0px !important;
+    }
+  }
+.bg{
+    background-color: #F5F6FA;
+    padding-left: 250px;
+    padding-top: 70px;
+}
+    .statis{
+        padding-left: 1rem;
+    }
+    .image{
+        padding: 10px 5px 10px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 200px;
+        margin: auto;
+    }
+    .cardProfile{
+        font-family: Poppins;
+        border-radius: 20px;
+        background-color: white;
+        min-height: 100px;
+        max-height: 200px;
+        width: 100%;
+        padding: 5px 0px
+    }
+    .image img{
+        height: 100%;
+        width: 100%;
+    }
+        .detailUser{
+            padding : 10px 20px;
+        }

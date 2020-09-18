@@ -1,0 +1,17 @@
+@media only screen and (max-width: 700px) {
+    .Navbar{
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+  }
+.Navbar{
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: white;
+}
+    .menu{
+        margin: 0px 10px 0px 20px;
+    }
+    .search{
+        cursor: pointer;
+    }

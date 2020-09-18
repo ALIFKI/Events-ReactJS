@@ -1,0 +1,12 @@
+.name{
+    font-family: Poppins-Bold;
+}
+.menuList p{
+    font-family: Poppins-medium;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    /* .popoverContent{
+        width: 40%;
+    } */

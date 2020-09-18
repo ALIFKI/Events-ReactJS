@@ -1,0 +1,35 @@
+.cardBook{
+    padding: 10px 10px 5px 10px;
+}
+.cardBook:hover .float{
+    right: 5px;
+    z-index: 1;
+}
+    .float{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(49, 53, 59, 0.12) 0px 3px 6px 0px;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        right: -50px;
+    }
+    .float:hover{
+        right: 5px;
+    }
+    .edit{
+        top: 5px;
+        background-color: white;
+        transition: 0.3s;
+    }
+    .delete{
+        top: 60px;
+        background-color: white;        
+        transition: 0.5s;
+    }
+.img-card{
+    border-radius: 20px;
+}
