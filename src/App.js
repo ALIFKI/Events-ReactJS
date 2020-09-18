@@ -5,6 +5,7 @@ import './styles/App.css'
 import {connect} from 'react-redux';
 import EventPage from './pages/EventPage';
 import EventList from './pages/EventList';
+import EventPost from './pages/EventPostPage';
 
 
 
@@ -15,8 +16,9 @@ function App(props) {
     <Router>
       <Switch>
         <>
-        <Route path='/' exact component={EventPage}/>
+        <Route path='/' exact component={EventPost}/>
         <Route path='/eventlist' exact component={EventList}/>
+        <Route path='/dashboard' exact component={EventPage}/>
         </>
       </Switch>
     </Router>

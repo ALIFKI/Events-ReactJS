@@ -1,7 +1,7 @@
 import React,{ Component } from 'react'
 import { Container,Table } from 'reactstrap';
 import Style from './Style.module.css'
-import { Pagination,Input } from 'antd';
+import { Pagination,Input, Row } from 'antd';
 import InputLogin from '../../components/Input';
 import { getEvents } from '../../redux/actions/admin'
 import {connect} from 'react-redux';
@@ -31,7 +31,9 @@ class EventsPage extends Component {
         this.passwordInput = React.createRef()
     }
     componentDidMount(){
-        this.getData()
+        if(this.props.data.event == null){
+          this.getData()
+        }
     }
 
     onChange = page => {
@@ -45,10 +47,6 @@ class EventsPage extends Component {
           }
           this.props.getEvents(data).then((res)=>{
             console.log(res.value.data.pageInfo)
-            this.setState({
-              totalPage: res.value.data.pageInfo.total_page,
-              total_data : res.value.data.data.length*res.value.data.pageInfo.total_page
-              })
           }).catch((err)=>{
             console.log(err)
           })
@@ -108,20 +106,16 @@ class EventsPage extends Component {
         }
         return(
             <>
-        <NavbarComponent/>
             <Container fluid={true}>
+              <Row>
+                <NavbarComponent/>
+              </Row>
               <div className={`row d-flex flex-row align-items-center justify-content-center p-5`}>
                 <div className='col-md-6 col-lg-12 pt-5'>
-                {/* <Search
-                    placeholder="Search Book"
-                    enterButton="Search"
-                    style={{width: '60%',paddingRight: '10px'}}
-                    size="medium"
-                    onChange={(e)=>{this.setState({search : e.target.value})}}
-                    onSearch={value=> this.handleOnSearch(value) }
-                    /> */}
-                <div className={`d-flex flex-row align-items-center justify-content-center`}>
-                    <InputLogin name={'Search'} required={true} placeholder={'Email'} type={'text'} value={this.state.search} ref={this.Search}/>
+                <div className={`row d-flex flex-row align-items-center justify-content-center mb-4`}>
+                    <div className={`${Style.srchIn}`}>
+                      <InputLogin name={'Search'} required={true} placeholder={'Email'} type={'text'} value={this.state.search} ref={this.Search}/>
+                    </div>
                     <div className={`${Style.button}`} onClick={this.onSearch}>
                         <SearchOutlined color={'white'}/>
                     </div>
@@ -155,8 +149,8 @@ class EventsPage extends Component {
                 {pagination}
                 </div>
               </div>
-                <DrawerInput/>
             </Container>
+                <DrawerInput/>
             </>
         )
 }

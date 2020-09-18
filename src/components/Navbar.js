@@ -8,56 +8,37 @@ import {
     Nav,
     UncontrolledDropdown,
     DropdownToggle,
-    NavItem
+    NavItem,
+    DropdownItem,
+    DropdownMenu,
+    NavbarBrand,
+    NavbarToggler
 } from 'reactstrap';
 import Style from '../styles/NavbarStyle.module.css'
 
 class NavbarComponent extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
+
+        this.state = {
+            toggle : false
+        }
     }
 
+    toggle = ()=>{
+        this.setState({toggle : !this.state.toggle})
+    }
     render() {
         return (
-        <Navbar className={`${Style.Navbar} justify-content-center`} light expand="md">
-                <Collapse isOpen={true} navbar className={`pl-4`}>
+        <Navbar className={`${Style.Navbar} justify-content-start align-items-center`} light expand="md">
+            <NavbarToggler onClick={this.toggle} />
+            <NavbarBrand href="/">
+                    <h4 className={'pl-2'}>NavBrand</h4 >
+            </NavbarBrand>
+                <Collapse isOpen={this.state.toggle} navbar className={`pl-4`}>
                 <Nav className="mr-auto" navbar>
-                    <UncontrolledDropdown nav inNavbar>
-                    <NavItem>
-                        <h4>NavBrand</h4>
-                    </NavItem>
-                    {/* <DropdownMenu right>
-                        <DropdownItem>
-                        Option 1
-                        </DropdownItem>
-                        <DropdownItem>
-                        Option 2
-                        </DropdownItem>
-                        <DropdownItem divider />
-                        <DropdownItem>
-                        Reset
-                        </DropdownItem>
-                    </DropdownMenu> */}
-                    </UncontrolledDropdown>
-                        <Link className={`btn right-btn ml-2 ${Style.btnInfo} ${Style.fP}`} to='/eventlist'>Event list</Link>
-                        <Link className={`btn right-btn ml-2 ${Style.btnInfo} ${Style.fP}`} to='/'>Dashboard</Link>
-                    {/* <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                        All Times
-                    </DropdownToggle>
-                    <DropdownMenu right>
-                        <DropdownItem>
-                        Option 1
-                        </DropdownItem>
-                        <DropdownItem>
-                        Option 2
-                        </DropdownItem>
-                        <DropdownItem divider />
-                        <DropdownItem>
-                        Reset
-                        </DropdownItem>
-                    </DropdownMenu>
-                    </UncontrolledDropdown> */}
+                        <Link className={`btn ml-2 ${Style.btnInfo} ${Style.fP}`} to='/eventlist'>Event list</Link>
+                        <Link className={`btn ml-2 ${Style.btnInfo} ${Style.fP}`} to='/dashboard'>Dashboard</Link>
                 </Nav>
                 </Collapse>
         </Navbar>

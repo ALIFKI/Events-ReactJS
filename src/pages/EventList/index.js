@@ -1,9 +1,9 @@
 import React,{ Component } from 'react'
-import { Container,Table } from 'reactstrap';
+import { Container } from 'reactstrap';
 import Style from './Style.module.css'
 import { Link, Redirect } from 'react-router-dom'
 import Logo from '../../images/bookshelf.png'
-import { Pagination,Input } from 'antd';
+import { Pagination,Input,Row, Col } from 'antd';
 import Card from '../../components/CardBook/index';
 import InputLogin from '../../components/Input';
 import { getEvents } from '../../redux/actions/admin'
@@ -67,20 +67,29 @@ class EventsList extends Component {
             pagination = <div className="l"></div>
         }
         return(
-            <>
-        <NavbarComponent/>
+          <>
             <Container fluid={true}>
-              <div className={`row d-flex flex-row align-items-center justify-content-center p-5`}>
-                <div className='col-md-6 col-lg-12 pt-5'>
-                <div className={`d-flex flex-row align-items-center justify-content-start flex-wrap`}>
+              <Row>
+                <NavbarComponent/>
+              </Row>
+              {/* <Row> */}
+              <div className={`row d-flex flex-row `}>
+                <div className='col-md-12 d-flex align-items-center justify-content-center flex-wrap pt-md-5'>
                     {
-                        this.props.data.events.map((row,index)=>{
-                            return <CardList data={row} key={index}/>
-                        })
+                      this.props.data.events.map((row,index)=>{
+                        return <CardList data={row} key={index}/>
+                      })
                     }
                 </div>
-                </div>
-              </div>
+                  </div>
+                {/* <div className='col-md-6 col-lg-12 d-flex align-items-center justify-content-center flex-wrap pt-md-5'>
+                    {
+                      this.props.data.events.map((row,index)=>{
+                        return <CardList data={row} key={index}/>
+                      })
+                    }
+                </div> */}
+                {/* </Row> */}
             </Container>
             </>
         )

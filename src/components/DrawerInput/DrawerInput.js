@@ -1,6 +1,7 @@
 import { Drawer, Space,Input,Select,notification } from 'antd';
 import React,{ Component } from 'react'
 import { Form,Button } from 'reactstrap';
+import { Link, Redirect } from 'react-router-dom'
 import Style from "./DrawerInputStyle.module.css";
 import InputLogin from '../Input';
 import {
@@ -127,9 +128,9 @@ class DrawerInput extends Component {
     return (
       <>
         <Space>
-          <div className={`${Style.buttonRound}`}>
-              <PlusOutlined onClick={this.showDrawer}/>
-          </div>
+        <Link className={`btn right-btn ml-2 ${Style.btnInfo} ${Style.fP} ${Style.buttonRound}`} to='/'>
+          <PlusOutlined/>
+        </Link>
         </Space>
         <Drawer
           placement={placement}
